@@ -1,0 +1,105 @@
+#user-area{
+    display: flex;
+    aside{
+        width: 20%;
+        background-color: white;
+        height: 85vh;
+        ul{
+            list-style: none;
+            li{
+                padding: 3px;
+                margin-top: 10px;
+                position: relative;
+                a{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%!important;
+                    text-decoration: none;
+                    color: black;
+                    span{
+                        display: inline-block;
+                    }
+                    i{
+                        margin-top: 1%;
+                        display: inline-block;
+                        color: gray;
+                    }
+                }
+                a:hover{
+                    background-color: black;
+                    color: white;
+                    i{
+                        color: white;
+                    }
+                }
+                .invisible{
+                    display: none;
+                }
+                .visible{
+                    display: block;
+                    padding: 10px;
+                    background-color: white;
+                    position: absolute;
+                    right:-34%;
+                    h5{
+                        margin-bottom: 12px;
+                    }
+                    a{
+                        background-color: black;
+                        color: white;
+                        padding: 5px;
+                        border-radius: 5px;
+                        margin-top: 10px;
+                    }
+                    .yes{
+                        margin-right: 14px;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 80%;
+        .row{
+            display: flex;
+            justify-content: space-around;
+            table,form{
+                background-color: white;
+                border-radius: 7px;
+                padding: 15px;
+            }
+            form{
+                max-height: 190px;
+                max-width: 333.36px;
+                input:focus,textarea:focus{
+                    outline: none;
+                }
+                input,textarea{
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid black;
+                    margin-top: 1rem;
+                    resize: none;
+                }
+                button{
+                    display: block;
+                    margin: auto;
+                    margin-top: 1rem;
+                    background-color: rgb(73, 182, 225);
+                    color: white;
+                    border: none;
+                    padding: 5px;
+                    border-radius: 5px;
+                }
+                button:hover{
+                    cursor: pointer;
+                    background-color: rgb(0, 154, 215);
+                    color: white;
+                }
+            }
+        }
+    }
+}

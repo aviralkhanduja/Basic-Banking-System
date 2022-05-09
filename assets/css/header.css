@@ -1,0 +1,18 @@
+nav {
+  display: flex !important;
+  justify-content: space-between !important;
+  background-color: #21212c !important;
+  font-weight: 650 !important;
+  padding: 10px 4px 10px 4px !important; }
+  nav a {
+    color: white !important;
+    text-decoration: none !important; }
+  nav #nav-right {
+    padding-top: 3px !important; }
+  nav #nav-right a {
+    padding: 7px !important;
+    border: 1px solid white !important;
+    margin-top: 4px !important; }
+  nav #nav-right a:hover {
+    background-color: white !important;
+    color: navy !important; }

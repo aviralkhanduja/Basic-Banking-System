@@ -1,0 +1,36 @@
+#request-to-join {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 13%; }
+
+#login-form {
+  width: 24%;
+  margin: auto;
+  padding: 10px;
+  background-color: white;
+  text-align: center; }
+  #login-form input:focus {
+    outline: none; }
+  #login-form input {
+    width: 70%;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 1rem; }
+  #login-form a {
+    text-decoration: none;
+    border: 1px solid gray;
+    background-color: #efefef;
+    padding: 4px;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 650; }
+  #login-form button {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 5px;
+    font-weight: 650; }
+  #login-form button:hover {
+    cursor: pointer;
+    background-color: darkgray; }
+  #login-form a:hover {
+    background-color: darkgray; }

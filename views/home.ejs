@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="/css/home.css">
+<section id="user-area">
+  <aside>
+    <ul>
+      <li>
+        <a href=""><span>About us</span><i class="fas fa-chevron-right"></i></a>
+      </li>
+      <li>
+        <a href="" id="delete-acct"><span>Delete Account</span><i class="fas fa-chevron-right"></i></a>
+        <div class="invisible" id="confirm-box">
+          <h5>Are you sure?</h5>
+            <a href="/user/home/deleteaccount" class="yes">Yes</a>
+            <a href="#" id="no-1">No</a>
+        </div>
+      </li>
+      <li>
+        <a href=""><span>Policies</span><i class="fas fa-chevron-right"></i></a>
+      </li>
+      <li href="/user/home/transactions">
+        <a href="/user/home/transactions"><span>Transaction history</span><i class="fas fa-chevron-right"></i></a>
+      </li>
+      <li>
+        <a href="" id="log-out"><span>Log out</span><i class="fas fa-chevron-right"></i></a>
+        <div class="invisible" id="confirm-box-2">
+          <h5>Are you sure?</h5>
+            <a href="/user/home/logout" class="yes">Yes</a>
+            <a href="#" id="no-2">No</a>
+        </div>
+      </li>
+    </ul>
+  </aside>
+  <main>
+    <div class="row">
+      <table>
+        <tr>
+          <td>
+            <h3>Your Identity Ticket</h3>
+          </td>
+        </tr>
+        <tr>
+          <td>Name:</td>
+          <td><%=locals.user.name%></td>
+        </tr>
+        <tr>
+          <td>Phone:</td>
+          <td><%=locals.user.phone%></td>
+        </tr>
+        <tr>
+          <td>Addreess:</td>
+          <td><%=locals.user.address%></td>
+        </tr>
+        <tr>
+          <td>Balance:</td>
+          <td><%=locals.user.balance%></td>
+        </tr>
+        <tr>
+          <td>Gold(In kgs):</td>
+          <td><%=locals.user.gold%></td>
+        </tr>
+      </table>
+      <form action="/user/home/addgold" method="post">
+        <input type="text" placeholder="Enter Money" name="money">
+        <input type="password" placeholder="Enter Password" name="password">
+        <button type="submit">Purchase Gold</button>
+      </form>
+    </div>
+    <div class="row">
+      <form action="/user/home/transact" method="post">
+        <input type="text" required placeholder="Enter Reciver's name" name="name">
+        <input type="email" required placeholder="Enter reciver's email" name="email">
+        <input type="number" required placeholder="Enter amount" name="money">
+        <button>Send Money</button>
+      </form>
+      <form action="">
+        <h3>Chat With us</h3>
+        <input type="text" required placeholder="Enter context">
+        <textarea required placeholder="Your Message"></textarea>
+        <button>Send Message</button>
+      </form>
+    </div>
+  </main>
+</section>
+<script src="/js/home.js"></script>

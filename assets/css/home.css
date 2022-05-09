@@ -1,0 +1,83 @@
+#user-area {
+  display: flex; }
+  #user-area aside {
+    width: 20%;
+    background-color: white;
+    height: 85vh; }
+    #user-area aside ul {
+      list-style: none; }
+      #user-area aside ul li {
+        padding: 3px;
+        margin-top: 10px;
+        position: relative; }
+        #user-area aside ul li a {
+          display: flex;
+          justify-content: space-between;
+          width: 100% !important;
+          text-decoration: none;
+          color: black; }
+          #user-area aside ul li a span {
+            display: inline-block; }
+          #user-area aside ul li a i {
+            margin-top: 1%;
+            display: inline-block;
+            color: gray; }
+        #user-area aside ul li a:hover {
+          background-color: black;
+          color: white; }
+          #user-area aside ul li a:hover i {
+            color: white; }
+        #user-area aside ul li .invisible {
+          display: none; }
+        #user-area aside ul li .visible {
+          display: block;
+          padding: 10px;
+          background-color: white;
+          position: absolute;
+          right: -34%; }
+          #user-area aside ul li .visible h5 {
+            margin-bottom: 12px; }
+          #user-area aside ul li .visible a {
+            background-color: black;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 10px; }
+          #user-area aside ul li .visible .yes {
+            margin-right: 14px; }
+  #user-area main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%; }
+    #user-area main .row {
+      display: flex;
+      justify-content: space-around; }
+      #user-area main .row table, #user-area main .row form {
+        background-color: white;
+        border-radius: 7px;
+        padding: 15px; }
+      #user-area main .row form {
+        max-height: 190px;
+        max-width: 333.36px; }
+        #user-area main .row form input:focus, #user-area main .row form textarea:focus {
+          outline: none; }
+        #user-area main .row form input, #user-area main .row form textarea {
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid black;
+          margin-top: 1rem;
+          resize: none; }
+        #user-area main .row form button {
+          display: block;
+          margin: auto;
+          margin-top: 1rem;
+          background-color: #49b6e1;
+          color: white;
+          border: none;
+          padding: 5px;
+          border-radius: 5px; }
+        #user-area main .row form button:hover {
+          cursor: pointer;
+          background-color: #009ad7;
+          color: white; }
