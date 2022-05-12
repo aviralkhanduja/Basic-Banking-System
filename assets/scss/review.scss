@@ -1,0 +1,40 @@
+form{
+    background-color: white;
+    width: 30%;
+    height:32%;
+    margin: auto;
+    margin-top: 10%;
+    padding: 10px;
+    border-radius: 12px;
+    h3{
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    #question-1{
+        display: inline-block;
+        margin-bottom: 6%;
+    }
+    button{
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+        background-color: rgb(73, 182, 225);
+        color: white;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: rgb(0, 154, 215);
+        color: white;
+    }
+    #status-positive{
+        text-align: center;
+        color: greenyellow;
+    }
+    #status-negative{
+        text-align: center;
+        color: red;
+    }
+}

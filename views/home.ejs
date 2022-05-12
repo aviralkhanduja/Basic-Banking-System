@@ -13,9 +13,6 @@
             <a href="#" id="no-1">No</a>
         </div>
       </li>
-      <li>
-        <a href=""><span>Policies</span><i class="fas fa-chevron-right"></i></a>
-      </li>
       <li href="/user/home/transactions">
         <a href="/user/home/transactions"><span>Transaction history</span><i class="fas fa-chevron-right"></i></a>
       </li>
@@ -59,8 +56,9 @@
         </tr>
       </table>
       <form action="/user/home/addgold" method="post">
-        <input type="text" placeholder="Enter Money" name="money">
+        <input type="email" required placeholder="Enter Email" name="email">
         <input type="password" placeholder="Enter Password" name="password">
+        <input type="text" placeholder="Enter Money" name="money">
         <button type="submit">Purchase Gold</button>
       </form>
     </div>
@@ -71,11 +69,14 @@
         <input type="number" required placeholder="Enter amount" name="money">
         <button>Send Money</button>
       </form>
-      <form action="">
-        <h3>Chat With us</h3>
-        <input type="text" required placeholder="Enter context">
-        <textarea required placeholder="Your Message"></textarea>
-        <button>Send Message</button>
+      <form action="/user/review">
+        <h3>Help us improve</h3>
+        <ul>
+          <li>We value our customers</li>
+          <li>What can we do to make user experience better?</li>
+          <li>Anything that we should add to our services?</li>
+        </ul>
+        <button>Review us</button>
       </form>
     </div>
   </main>

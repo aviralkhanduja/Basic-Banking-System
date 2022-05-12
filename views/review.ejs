@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/css/review.css">
+<form action="/user/review/create" method="post">
+    <h3>Thank you for choosing us&nbsp;<i class="fas fa-smile-beam"></i></h3>
+    <h4 id="question-1">Your experience:</h4>
+    <select name="satisfaction" id="satisfaction" required>
+        <option value="">Select Level</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Bad">Bad</option>
+    </select>
+    <h4>Will you recommend us to others?</h4>
+    <input type="checkbox" value="true" name="scalability" id="true">
+    <label for="true">Yes</label>
+    <br>
+    <input type="checkbox" value="false" name="scalability" id="false">
+    <label for="false">No</label>
+    <br>
+    <button>Submit</button>
+    <%if(success===true){%>
+        <h4 id="status-positive">Your response is recorded</h4>
+    <%}else if(success===false){%>
+        <h4 id="status-negative">Sorry there was a problem recording your response</h4>
+    <%}%>
+</form>

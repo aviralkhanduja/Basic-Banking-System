@@ -1,6 +1,16 @@
 const Transaction=require('../models/transaction');
 const User=require('../models/user');
+const Review=require('../models/review');
 exports.displaySpecificTransactions=function(req,res){
+    User.findById(req.user._id).populate('transactions').exec(function(err,trans_list){
+        if(err){
+            console.log('error=',err);
+            return res.redirect('/user/home');
+        }
+        console.log('trans_list=',trans_list.transactions);
+        return res.render('transaction',{transactions:trans_list.transactions});
+    });
+    /*
     Transaction.find({$or:[{semail:req.user.email},{remail:req.user.email}]},function(err,trans_list){
         if(err){
             console.log('error in displaying transactions');
@@ -8,6 +18,7 @@ exports.displaySpecificTransactions=function(req,res){
         }
         return res.render('transaction',{transactions:trans_list});
     });
+    */
 };
 exports.displayHomeSpecific=function(req,res){
    return res.render('home');
@@ -71,3 +82,16 @@ exports.endSession=function(req,res){
     req.logout();
     return res.redirect('/');
 };
+exports.review=function(req,res){
+    res.render('review',{success:undefined});
+};
+exports.createReview=function(req,res){
+    req.body.user=req.user._id;
+    Review.create(req.body,function(err,entry){
+        if(err){
+            console.log('Problem while storing review')
+            return res.render('review',{success:false});
+        }
+        return res.render('review',{success:true});
+    });
+};  

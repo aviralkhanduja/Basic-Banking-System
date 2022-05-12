@@ -1,0 +1,33 @@
+form {
+  background-color: white;
+  width: 30%;
+  height: 32%;
+  margin: auto;
+  margin-top: 10%;
+  padding: 10px;
+  border-radius: 12px; }
+  form h3 {
+    text-align: center;
+    margin-bottom: 5%; }
+  form #question-1 {
+    display: inline-block;
+    margin-bottom: 6%; }
+  form button {
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    background-color: #49b6e1;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px; }
+  form button:hover {
+    cursor: pointer;
+    background-color: #009ad7;
+    color: white; }
+  form #status-positive {
+    text-align: center;
+    color: greenyellow; }
+  form #status-negative {
+    text-align: center;
+    color: red; }

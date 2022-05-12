@@ -54,30 +54,45 @@
       display: flex;
       justify-content: space-around; }
       #user-area main .row table, #user-area main .row form {
+        max-height: 190px;
+        max-width: 400.36px;
+        min-width: 400.36px;
         background-color: white;
         border-radius: 7px;
         padding: 15px; }
-      #user-area main .row form {
-        max-height: 190px;
-        max-width: 333.36px; }
-        #user-area main .row form input:focus, #user-area main .row form textarea:focus {
-          outline: none; }
-        #user-area main .row form input, #user-area main .row form textarea {
-          width: 100%;
-          border: none;
-          border-bottom: 1px solid black;
-          margin-top: 1rem;
-          resize: none; }
-        #user-area main .row form button {
-          display: block;
-          margin: auto;
-          margin-top: 1rem;
-          background-color: #49b6e1;
-          color: white;
-          border: none;
-          padding: 5px;
-          border-radius: 5px; }
-        #user-area main .row form button:hover {
-          cursor: pointer;
-          background-color: #009ad7;
-          color: white; }
+      #user-area main .row form ul {
+        list-style: none; }
+        #user-area main .row form ul li {
+          position: relative;
+          padding-left: 8px;
+          margin-bottom: 7px; }
+        #user-area main .row form ul li::before {
+          content: '';
+          background-color: #141313;
+          height: 6px;
+          width: 6px;
+          border-radius: 50%;
+          position: absolute;
+          left: 0%;
+          top: 40%; }
+      #user-area main .row form input:focus, #user-area main .row form textarea:focus {
+        outline: none; }
+      #user-area main .row form input, #user-area main .row form textarea {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid black;
+        margin-top: 1rem;
+        resize: none; }
+      #user-area main .row form button {
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+        background-color: #49b6e1;
+        color: white;
+        border: none;
+        padding: 5px;
+        border-radius: 5px; }
+      #user-area main .row form button:hover {
+        cursor: pointer;
+        background-color: #009ad7;
+        color: white; }

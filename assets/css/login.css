@@ -1,3 +1,16 @@
+.visible {
+  opacity: 1;
+  -webkit-transition: opacity 1000ms linear;
+  transition: opacity 1000ms linear;
+  background-color: white;
+  text-align: center; }
+  .visible h3 {
+    color: red;
+    margin-bottom: 5px; }
+
+.invisible {
+  opacity: 0; }
+
 #request-to-join {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
@@ -33,4 +46,5 @@
     cursor: pointer;
     background-color: darkgray; }
   #login-form a:hover {
-    background-color: darkgray; }
+    background-color: darkgray;
+    border: 2px solid black; }

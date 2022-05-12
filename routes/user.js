@@ -7,4 +7,6 @@ router.get('/home/deleteaccount',user_controller.deleteUser);
 router.get('/home/transactions',user_controller.displaySpecificTransactions);
 router.post('/home/addgold',user_controller.addGold);
 router.post('/home/transact',user_controller.makeTransaction);
+router.get('/review',user_controller.review);
+router.post('/review/create',user_controller.createReview);
 module.exports=router;

@@ -5,20 +5,24 @@ const moment=require('moment');
 const User = require('../models/user');
 console.log('Hello');
 passport.use(new LocalStrategy({
+    passReqToCallback:true,
     usernameField: 'email',
 },
-function(Email, password, done){
+function(req,Email, password, done){
     // find a user and establish the identity
     console.log('Reached!******');
     User.findOne({email: Email}, function(err, user)  {
         if (err){
             console.log('Error in finding user --> Passport');
-            return done(err);
+            return done(null,false,req.flash('error','User not found'));
         }
 
-        if (!user || user.password != password){
-            console.log('Invalid Username/Password');
-            return done(null, false);
+        if (!user ){
+            return done(null,false,req.flash('error','User not found'));
+        }
+        if(user.password != password)
+        {
+            return done(null,false,req.flash('error','Incorrect Password'));
         }
         else
         return done(null, user);
