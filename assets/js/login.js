@@ -1,7 +1,9 @@
 window.addEventListener('load',function(){
     let elem=document.getElementById('error-box');
-    console.log('elem=',elem);
-    setTimeout(function(){
-        elem.classList.add('invisible');
-    },3000);
+    if(elem){
+        let butt=document.getElementById('retry-login');
+        butt.addEventListener('click',function(){
+            elem.classList.add('invisible');
+        });
+    }
 });

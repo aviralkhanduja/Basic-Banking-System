@@ -1,35 +1,37 @@
-body {
-  background-image: url("../images/login_wallpaper.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh; }
-  body h2 {
-    text-align: center;
-    margin-top: 13%; }
-  body #take-input {
-    width: 42%;
+h2 {
+  text-align: center;
+  margin-top: 13%; }
+
+#take-input {
+  width: 42%;
+  margin: auto;
+  padding: 10px;
+  background-color: white;
+  text-align: center; }
+  #take-input input:focus {
+    outline: none; }
+  #take-input input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 1rem; }
+  #take-input .row {
+    display: flex;
+    justify-content: space-around; }
+    #take-input .row .col {
+      width: 40%; }
+  #take-input button {
+    width: fit-content;
+    text-decoration: none;
     margin: auto;
-    padding: 10px;
-    background-color: white;
-    text-align: center; }
-    body #take-input input:focus {
-      outline: none; }
-    body #take-input input {
-      width: 100%;
-      border: none;
-      border-bottom: 1px solid black;
-      margin-top: 1rem; }
-    body #take-input .row {
-      display: flex;
-      justify-content: space-around; }
-      body #take-input .row .col {
-        width: 40%; }
-    body #take-input button {
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
-      padding: 5px;
-      font-weight: 650; }
-    body #take-input button:hover {
-      cursor: pointer;
-      background-color: darkgray; }
+    margin-top: 1rem;
+    display: block;
+    background-color: #49b6e1;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px; }
+  #take-input button:hover {
+    cursor: pointer;
+    background-color: #009ad7;
+    color: white; }

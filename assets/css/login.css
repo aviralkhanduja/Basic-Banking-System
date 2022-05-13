@@ -1,15 +1,30 @@
 .visible {
-  opacity: 1;
+  display: block;
   -webkit-transition: opacity 1000ms linear;
-  transition: opacity 1000ms linear;
+  transition: display 1000ms linear;
   background-color: white;
   text-align: center; }
   .visible h3 {
     color: red;
     margin-bottom: 5px; }
+  .visible button {
+    width: fit-content;
+    text-decoration: none;
+    margin: auto;
+    margin-top: 0.5rem;
+    display: block;
+    background-color: #49b6e1;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px; }
+  .visible button:hover {
+    cursor: pointer;
+    background-color: #009ad7;
+    color: white; }
 
 .invisible {
-  opacity: 0; }
+  display: none; }
 
 #request-to-join {
   text-align: center;
@@ -21,7 +36,8 @@
   margin: auto;
   padding: 10px;
   background-color: white;
-  text-align: center; }
+  text-align: center;
+  border-radius: 10px; }
   #login-form input:focus {
     outline: none; }
   #login-form input {
@@ -29,22 +45,21 @@
     border: none;
     border-bottom: 1px solid black;
     margin-top: 1rem; }
-  #login-form a {
+  #login-form button, #login-form a {
+    width: fit-content;
     text-decoration: none;
-    border: 1px solid gray;
-    background-color: #efefef;
-    padding: 4px;
-    color: black;
-    font-size: 0.8rem;
-    font-weight: 650; }
-  #login-form button {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin: auto;
+    display: block;
+    background-color: #49b6e1;
+    color: white;
+    border: none;
     padding: 5px;
-    font-weight: 650; }
-  #login-form button:hover {
+    border-radius: 5px; }
+  #login-form button:hover, #login-form a:hover {
     cursor: pointer;
-    background-color: darkgray; }
-  #login-form a:hover {
-    background-color: darkgray;
-    border: 2px solid black; }
+    background-color: #009ad7;
+    color: white; }
+  #login-form #join {
+    margin-top: 1rem; }
+  #login-form #new-entry {
+    margin-top: -10px; }
