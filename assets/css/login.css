@@ -50,15 +50,15 @@
     text-decoration: none;
     margin: auto;
     display: block;
-    background-color: #49b6e1;
+    background-color: #1c1717;
     color: white;
-    border: none;
     padding: 5px;
-    border-radius: 5px; }
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 0.8rem; }
   #login-form button:hover, #login-form a:hover {
     cursor: pointer;
-    background-color: #009ad7;
-    color: white; }
+    background-color: black; }
   #login-form #join {
     margin-top: 1rem; }
   #login-form #new-entry {

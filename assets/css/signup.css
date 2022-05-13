@@ -21,17 +21,13 @@ h2 {
     #take-input .row .col {
       width: 40%; }
   #take-input button {
-    width: fit-content;
-    text-decoration: none;
-    margin: auto;
     margin-top: 1rem;
-    display: block;
-    background-color: #49b6e1;
+    background-color: #1c1717;
     color: white;
-    border: none;
     padding: 5px;
-    border-radius: 5px; }
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 0.8rem; }
   #take-input button:hover {
     cursor: pointer;
-    background-color: #009ad7;
-    color: white; }
+    background-color: black; }
