@@ -2,6 +2,7 @@ const express=require('express');
 const router=express.Router();
 const user_controller=require('../controllers/user_controller');
 router.get('/home',user_controller.displayHomeSpecific);
+router.get('/home/underconstruction',user_controller.displayUC);
 router.get('/home/logout',user_controller.endSession);
 router.get('/home/deleteaccount',user_controller.deleteUser);
 router.get('/home/transactions',user_controller.displaySpecificTransactions);

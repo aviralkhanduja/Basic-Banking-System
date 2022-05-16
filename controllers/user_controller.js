@@ -99,3 +99,6 @@ exports.createReview=function(req,res){
         return res.render('review',{success:true});
     });
 };  
+exports.displayUC=function(req,res){
+    res.render('underconstruction');
+}

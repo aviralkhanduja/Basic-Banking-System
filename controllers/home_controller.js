@@ -2,7 +2,7 @@ const User=require('../models/user');
 exports.login=function(req,res){
     const errors=req.flash().error||[]; 
     return res.render('login',{errors});
-};
+};  
 exports.createSession=function(req,res){
     console.log('ram ram bhai ji!');
     return res.redirect('/user/home');
