@@ -9,8 +9,8 @@
         <a href="" id="delete-acct"><span>Delete Account</span><i class="fas fa-chevron-right"></i></a>
         <div class="invisible" id="confirm-box">
           <h5>Are you sure?</h5>
-            <a href="/user/home/deleteaccount" class="yes">Yes</a>
-            <a href="#" id="no-1">No</a>
+          <a href="/user/home/deleteaccount" class="yes">Yes</a>
+          <a href="#" id="no-1">No</a>
         </div>
       </li>
       <li href="/user/home/transactions">
@@ -20,65 +20,82 @@
         <a href="" id="log-out"><span>Log out</span><i class="fas fa-chevron-right"></i></a>
         <div class="invisible" id="confirm-box-2">
           <h5>Are you sure?</h5>
-            <a href="/user/home/logout" class="yes">Yes</a>
-            <a href="#" id="no-2">No</a>
+          <a href="/user/home/logout" class="yes">Yes</a>
+          <a href="#" id="no-2">No</a>
         </div>
       </li>
     </ul>
   </aside>
   <main>
-    <div class="row">
-      <table>
-        <tr>
-          <td>
-            <h3>Your Identity Ticket</h3>
-          </td>
-        </tr>
-        <tr>
-          <td>Name:</td>
-          <td><%=locals.user.name%></td>
-        </tr>
-        <tr>
-          <td>Phone:</td>
-          <td><%=locals.user.phone%></td>
-        </tr>
-        <tr>
-          <td>Addreess:</td>
-          <td><%=locals.user.address%></td>
-        </tr>
-        <tr>
-          <td>Balance:</td>
-          <td><%=locals.user.balance%></td>
-        </tr>
-        <tr>
-          <td>Gold(In kgs):</td>
-          <td><%=locals.user.gold%></td>
-        </tr>
-      </table>
-      <form action="/user/home/addgold" method="post">
-        <input type="email" required placeholder="Enter Email" name="email">
-        <input type="password" placeholder="Enter Password" name="password">
-        <input type="text" placeholder="Enter Money" name="money">
-        <button type="submit">Purchase Gold</button>
-      </form>
-    </div>
-    <div class="row">
-      <form action="/user/home/transact" method="post">
-        <input type="text" required placeholder="Enter Reciver's name" name="name">
-        <input type="email" required placeholder="Enter reciver's email" name="email">
-        <input type="number" required placeholder="Enter amount" name="money">
-        <button>Send Money</button>
-      </form>
-      <form action="/user/review">
-        <h3>Help us improve</h3>
-        <ul>
-          <li>We value our customers</li>
-          <li>What can we do to make user experience better?</li>
-          <li>Anything that we should add to our services?</li>
-        </ul>
-        <button>Review us</button>
-      </form>
-    </div>
+    <%if(transact_error===true){%>
+      <div id="transact-err-disp">
+        <p>Invalid value entered!<br>
+          Please try again</p>
+        <a id="remove-err-disp" href="/user/home">OK</a>
+      </div>
+      <%}%>
+        <div class="row">
+          <table>
+            <tr>
+              <td>
+                <h3>Your Identity Ticket</h3>
+              </td>
+            </tr>
+            <tr>
+              <td>Name:</td>
+              <td>
+                <%=locals.user.name%>
+              </td>
+            </tr>
+            <tr>
+              <td>Phone:</td>
+              <td>
+                <%=locals.user.phone%>
+              </td>
+            </tr>
+            <tr>
+              <td>Addreess:</td>
+              <td>
+                <%=locals.user.address%>
+              </td>
+            </tr>
+            <tr>
+              <td>Balance:</td>
+              <td>
+                <%=locals.user.balance%>
+              </td>
+            </tr>
+            <tr>
+              <td>Gold(In kgs):</td>
+              <td>
+                <%=locals.user.gold%>
+              </td>
+            </tr>
+          </table>
+          <form action="/user/home/addgold" method="post">
+            <input type="email" required placeholder="Enter Email" name="email">
+            <input type="password" placeholder="Enter Password" name="password">
+            <input type="text" placeholder="Enter Money" name="money">
+            <button type="submit" id="gold-button">Purchase Gold</button>
+          </form>
+        </div>
+        <div class="row">
+          <form action="/user/home/transact" method="post">
+            <input type="text" required placeholder="Enter Reciver's name" name="name">
+            <input type="email" required placeholder="Enter reciver's email" name="email">
+            <input type="number" required placeholder="Enter amount" name="money">
+            <button>Send Money</button>
+          </form>
+          <form action="/user/review">
+            <h3>Help us improve</h3>
+            <ul>
+              <li>We value our customers</li>
+              <li>What can we do to make user experience better?</li>
+              <li>Anything that we should add to our services?</li>
+            </ul>
+            <button>Review us</button>
+          </form>
+        </div>
   </main>
 </section>
 <script src="/js/home.js"></script>

@@ -18,3 +18,8 @@ elem0.addEventListener('click',function(event){
     event.preventDefault();
     elem3.classList.toggle('visible');
 });
+const transact_errbox=document.getElementById('transact-err-disp');
+const btn=document.getElementById('remove-err-disp');
+btn.addEventListener('click',function(){
+    transact_errbox.classList.toggle('invisible');
+});

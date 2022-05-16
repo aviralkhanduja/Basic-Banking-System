@@ -50,6 +50,44 @@
     flex-direction: column;
     justify-content: space-between;
     width: 80%; }
+    #user-area main .invisible {
+      display: none; }
+    #user-area main button {
+      display: block;
+      margin: auto;
+      margin-top: 1rem;
+      background-color: #49b6e1;
+      color: white;
+      border: none;
+      padding: 5px;
+      border-radius: 5px; }
+    #user-area main button:hover {
+      cursor: pointer;
+      background-color: #009ad7;
+      color: white; }
+    #user-area main #transact-err-disp {
+      width: fit-content;
+      position: absolute;
+      background-color: white;
+      top: 6%;
+      left: 54.5%;
+      border: 2px solid red;
+      padding: 4px; }
+      #user-area main #transact-err-disp a {
+        text-decoration: none;
+        display: block;
+        width: fit-content;
+        margin: auto;
+        margin-top: 1rem;
+        background-color: #49b6e1;
+        color: white;
+        border: none;
+        padding: 5px;
+        border-radius: 5px; }
+      #user-area main #transact-err-disp a:hover {
+        cursor: pointer;
+        background-color: #009ad7;
+        color: white; }
     #user-area main .row {
       display: flex;
       justify-content: space-around; }
@@ -83,16 +121,3 @@
         border-bottom: 1px solid black;
         margin-top: 1rem;
         resize: none; }
-      #user-area main .row form button {
-        display: block;
-        margin: auto;
-        margin-top: 1rem;
-        background-color: #49b6e1;
-        color: white;
-        border: none;
-        padding: 5px;
-        border-radius: 5px; }
-      #user-area main .row form button:hover {
-        cursor: pointer;
-        background-color: #009ad7;
-        color: white; }

@@ -59,10 +59,54 @@
         }
     }
     main{
+        .invisible{
+            display: none;
+        }
+        button{
+            display: block;
+            margin: auto;
+            margin-top: 1rem;
+            background-color: rgb(73, 182, 225);
+            color: white;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgb(0, 154, 215);
+            color: white;
+        }
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 80%;
+        #transact-err-disp{
+            width: fit-content;
+            position: absolute;
+            background-color: white;
+            top: 6%;
+            left: 54.5%;
+            border: 2px solid red;
+            padding: 4px;
+            a{
+                text-decoration: none;
+                display: block;
+                width: fit-content;
+                margin: auto;
+                margin-top: 1rem;
+                background-color: rgb(73, 182, 225);
+                color: white;
+                border: none;
+                padding: 5px;
+                border-radius: 5px;
+            }
+            a:hover{
+                cursor: pointer;
+                background-color: rgb(0, 154, 215);
+                color: white;
+            }
+        }
         .row{
             display: flex;
             justify-content: space-around;
@@ -102,21 +146,6 @@
                     border-bottom: 1px solid black;
                     margin-top: 1rem;
                     resize: none;
-                }
-                button{
-                    display: block;
-                    margin: auto;
-                    margin-top: 1rem;
-                    background-color: rgb(73, 182, 225);
-                    color: white;
-                    border: none;
-                    padding: 5px;
-                    border-radius: 5px;
-                }
-                button:hover{
-                    cursor: pointer;
-                    background-color: rgb(0, 154, 215);
-                    color: white;
                 }
             }
         }

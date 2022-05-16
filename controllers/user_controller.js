@@ -21,13 +21,15 @@ exports.displaySpecificTransactions=function(req,res){
     */
 };
 exports.displayHomeSpecific=function(req,res){
-   return res.render('home');
+        return res.render('home',{transact_error:false});
 };
 exports.addGold=function(req,res){
     const gold=47400;
     const val=req.user.gold+(req.body.money/gold);
     if(req.body.money<0||req.user.balance<req.body.money)
-    return res.redirect('/user/home');
+    {
+        return res.render('home',{transact_error:true});
+    }
        
     User.findByIdAndUpdate(req.user._id,{gold:val,$inc:{balance:-req.body.money}},function(err,user){
         if(err){
@@ -45,7 +47,9 @@ exports.addGold=function(req,res){
 };
 exports.makeTransaction=function(req,res){
     if(req.body.money<0||req.user.balance<req.body.balance)
-    return res.redirect('/user/home');
+    {
+        return res.render('home',{transact_error:true});
+    }
     User.findOneAndUpdate({email:req.body.email},{$inc:{balance:req.body.money}},function(err,user){
         if(err){
             console.log('Error while making transaction_1');
